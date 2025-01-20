@@ -7,7 +7,7 @@
 
 <Container class="h-full w-screen">
 	<h1 class="mt-16 text-center text-4xl lg:text-5xl">
-		<div>About</div>n
+		<div>About</div>
 	</h1>
 	<div class="mt-4 flex flex-col space-y-4 text-center text-neutral-300">
 		<div>
