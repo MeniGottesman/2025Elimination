@@ -25,11 +25,6 @@
 			options: {
 				redirectTo: `${url}/api/auth/callback`, // potentially add killcode when logging in (after scanning qr code)
 				scopes: 'openid profile email',
-				queryParams: {
-					access_type: 'offline',
-					prompt: 'consent',
-					hd: 'pausd.us'
-				}
 			}
 		});
 	};

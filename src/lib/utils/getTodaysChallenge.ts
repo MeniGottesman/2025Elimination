@@ -1,77 +1,34 @@
-// Lol thanks ChatGPT
-export function getTodaysChallenge() {
-	const currentDate = new Date();
-	const day = currentDate.getDate();
-	let rule = '';
+const rules = {
+    20: 'Elimination Sign Up is open until Sunday, 11:59 PM',
+    21: 'Elimination Sign Up is open until Sunday, 11:59 PM',
+    22: 'Elimination Sign Up is open until Sunday, 11:59 PM',
+    23: 'Plushie Handouts @ Senior Quad, Lunch & Elimination Sign Up is open until Sunday, 11:59 PM',
+    24: 'Plushie Handouts @ Senior Quad, Lunch & Elimination Sign Up is open until Sunday, 11:59 PM',
+    25: 'Elimination Sign Up is open until Sunday, 11:59 PM',
+    26: 'Targets Assigned at 11:59 PM (Sign ups close)',
+    27: 'GAME STARTS. To stay safe, players must hold the animal with their right hand',
+    28: 'To stay safe, players must be holding the animal with both hands',
+    29: 'Targets Change at 10 PM: To stay safe, players must be holding animal ABOVE their shoulder',
+    30: 'To stay safe, players must be wearing glasses',
+    31: 'To stay safe, players must have their shirt visibly, fully tucked in',
+    1: '10 PM: Players with less than one elimination are automatically eliminated. Targets Change & On weekends, players must abide by all rules and must carry a plushie to be safe',
+    2: 'On weekends, players must abide by all rules and must carry a plushie to be safe',
+    3: 'To stay safe, players must be touching a vertical wall (e.g., the side of a building)',
+    4: 'To stay safe, players must be wearing monochrome (not black or white, excluding shoes)',
+    5: 'Targets Change at 10 PM: To stay safe, players must be wearing JORTS (jean shorts). You CAN roll up regular jeans to be shorts-length (at or above knee level)',
+    6: 'To stay safe, players must be wearing a wig',
+    7: 'To stay safe, players must be carrying their things in something other than a backpack',
+    8: '10 PM: Players with less than two eliminations are automatically eliminated. Targets Change & On weekends, players must abide by all rules and must carry a plushie to be safe',
+    9: ' & On weekends, players must abide by all rules and must carry a plushie to be safe. For this week, nobody is safe: there are only requirements for eliminating others',
+    10: 'To eliminate others, players must be SITTING OR LAYING DOWN ON THE GROUND',
+    11: 'To eliminate others, players must have at least one shoe off',
+    12: 'Targets Change at 10 PM: To eliminate others, players must give their target a flower immediately after eliminating them',
+    13: 'Weekend rules apply: Players must abide by all rules and must carry a plushie to be safe',
+    18: 'NO ONE IS SAFE (can be tagged anytime even with the animal)',
+};
 
-	switch (day) {
-		case 28:
-			rule = 'Targets Assigned 10 PM (Sign ups close)';
-			break;
-		case 29:
-			rule = 'GAME STARTS. 12 AM: To stay safe, players must hold the animal with their right hand';
-			break;
-		case 30:
-			rule = 'To stay safe, players must be holding the animal with both hands';
-			break;
-		case 31:
-			rule = 'Targets Change at 10 PM: To stay safe, players must be holding animal BELOW waist';
-			break;
-		case 1:
-			rule = 'To stay safe, players must be holding animal ABOVE their shoulder';
-			break;
-		case 2:
-			rule = 'To stay safe, players must be under a roof or overhang';
-			break;
-		case 3:
-			rule =
-				'Targets Change at 10 PM: Players with less than one elimination are automatically eliminated';
-			break;
-		case 4:
-		case 11:
-		case 16:
-		case 19:
-			rule = 'On weekends, players must abide by all rules and must carry a plushie to be safe';
-			break;
-		case 5:
-			rule = 'To stay safe, players must be touching a wall';
-			break;
-		case 6:
-			rule = 'To stay safe, players must be wearing a HAT.';
-			break;
-		case 7:
-			rule =
-				'Targets Change at 10 PM: To stay safe, players must be wearing JORTS (jean shorts) You CAN roll up regular jeans to be shorts-length (at or above knee level).';
-			break;
-		case 8:
-			rule = 'To stay safe, players must be wearing a wig';
-			break;
-		case 9:
-			rule = 'To stay safe, players must be SITTING OR LAYING DOWN ON THE GROUND.';
-			break;
-		case 10:
-			rule =
-				'Targets Change at 10 PM: Players with less than two eliminations are automatically eliminated';
-			break;
-		case 12:
-			rule = 'To eliminate others, players must have at least one shoe off.';
-			break;
-		case 13:
-			rule = 'To eliminate others, players must be carrying a football in one hand.';
-			break;
-		case 14:
-			rule =
-				'Targets Change at 10 PM:. To eliminate others, players must give their target a flower immediately after eliminating them.';
-			break;
-		case 15:
-			rule = 'To eliminate others, players must be wearing a tie around their neck.';
-			break;
-		case 20:
-			rule = 'NO ONE IS SAFE. (can be tagged anytime even w/animal)';
-			break;
-		default:
-			rule = 'On weekends, players must abide by all rules and must carry a plushie to be safe';
-			break;
-	}
-	return rule;
+export function getTodaysChallenge() {
+    const currentDate = new Date();
+    const day = currentDate.getDate();
+    return rules[day] || 'No challenge for today';
 }
