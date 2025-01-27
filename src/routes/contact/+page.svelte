@@ -14,7 +14,6 @@
 		</div>
 		<div class="rounded-lg bg-neutral-900 px-4 py-2">Meni Gottesman: mg45460@pausd.us</div>
 		<div class="rounded-lg bg-neutral-900 px-4 py-2">Nia Porter: np33355@pausd.us</div>
-		<div class="rounded-lg bg-neutral-900 px-4 py-2">Mrs. Hall: lhall@pausd.org</div>
 	</div>
 </Container>
 <Footer />
