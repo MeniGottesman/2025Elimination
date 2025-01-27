@@ -37,6 +37,9 @@
 	// Error Message
 	let killCodeErrorMessage = '';
 
+	// Anti-spam variables
+	let submissionTimestamps: number[] = [];
+
 	let html5QrCode: Html5Qrcode;
 
 	onMount(async () => {
@@ -53,7 +56,6 @@
 		QRCode.toCanvas(
 			node,
 			`${$page.url.origin}/api/game/eliminatetarget?code=${killCode}&redirect=true`,
-			// `https://elimination.gunn.one/api/game/eliminatetarget?code=${''}&redirect=true`,
 			{ width: 256 },
 			(error: any) => {
 				if (error) console.error(error);
@@ -78,14 +80,31 @@
 		}, 1500);
 	};
 
-	// Handle Submitting Kill Code
+	// Handle Submitting Kill Code with anti-spam logic
 	const submitCode = async () => {
+		const currentTime = Date.now();
+		submissionTimestamps.push(currentTime);
+
+		// Remove timestamps older than 10 minutes
+		submissionTimestamps = submissionTimestamps.filter(
+			(timestamp) => currentTime - timestamp <= 10 * 60 * 1000
+		);
+
+		// Check for spam
+		if (submissionTimestamps.length > 5) {
+			alert('You have been eliminated due to spamming submissions.');
+			await supabase.from('players').update({ alive: false }).eq('id', playerData.id);
+			return;
+		}
+
+		// Normal submission logic
 		showKillLoadingSpinner = true;
 		const req = await fetch(
 			`${$page.url.origin}/api/game/eliminatetarget?code=${inputKillCode}&redirect=false`
 		);
 		const data = await req.json();
 		showKillLoadingSpinner = false;
+
 		if (data.error) {
 			killCodeErrorMessage = data.error;
 
