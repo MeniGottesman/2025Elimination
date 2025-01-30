@@ -9,7 +9,7 @@ const rules = {
     27: 'GAME STARTS: To stay safe, players must hold the animal with their right hand. Spamming kill codes will result in elimination. Do not attempt to eliminate players during class or in any other prohibited areas. Refer to the rules for more information. If you do not have a target, it means you missed the deadline to sign up with your PAUSD email.',
     28: 'To stay safe, players must be holding the animal with both hands',
     29: 'Targets Change at 10:30 PM: To stay safe, players must be holding animal ABOVE their shoulder',
-    30: 'To stay safe, players must be wearing glasses over their eyes. To eliminate a player that is not safe, tag them with a plushie.',
+    30: 'To stay safe, players must be holding their plushie and wearing glasses over their eyes. To eliminate a player that is not safe, tag them with a plushie.',
     31: 'To stay safe, players must have their shirt visibly, fully tucked in',
     1: '10 PM: Players with less than one elimination are automatically eliminated. Targets Change & On weekends, players must abide by all rules and must carry a plushie to be safe',
     2: 'On weekends, players must abide by all rules and must carry a plushie to be safe',
