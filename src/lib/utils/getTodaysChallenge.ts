@@ -14,7 +14,7 @@ const rules = {
     1: '10 PM: Players with less than one elimination are automatically eliminated. Targets Change & On weekends, players must abide by all rules and must carry a plushie to be safe',
     2: 'On weekends, players must abide by all rules and must carry a plushie to be safe',
     3: 'To stay safe, players must be touching a vertical wall (e.g., the side of a building)',
-    4: 'To stay safe, players must be wearing monochrome (not black or white, excluding shoes)',
+    4: 'To be safe you must be VISIBLY wearing all ONE COLOR (excluding shoes) This one color CANNOT be BLACK or WHITE',
     5: 'Targets Change at 10 PM: To stay safe, players must be wearing JORTS (jean shorts). You CAN roll up regular jeans to be shorts-length (at or above knee level)',
     6: 'To stay safe, players must be wearing a wig',
     7: 'To stay safe, players must be carrying their things in something other than a backpack',
